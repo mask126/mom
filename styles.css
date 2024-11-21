@@ -92,7 +92,7 @@ body {
 /* Àäàïòèâíîñòü äëÿ òåëåôîíîâ */
 @media (max-width: 600px) {
     body {
-        height: auto;
+        height: 100vh;
         padding: 20px;
     }
 

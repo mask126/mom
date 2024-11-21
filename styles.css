@@ -44,7 +44,7 @@ body {
 
 .hearts {
     display: flex;
-    height: -50vh;
+    height: -100vh;
     overflow: hidden;
     margin-top: 20px;
     align-items: flex-end;

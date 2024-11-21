@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffcccc, #ffe6e6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.greeting {
+    font-size: 2.5rem;
+    color: #ff6699;
+    margin: 0;
+    text-shadow: 2px 2px #ff99cc;
+}
+
+.message {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #ff6699;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+    .btn:hover {
+        background-color: #ff3366;
+    }
+
+.hearts {
+    display: flex;
+    height: 40vh;
+    overflow: hidden;
+    margin-top: 20px;
+    align-items: flex-end;
+
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff6699;
+    transform: rotate(45 deg);
+    animation: float 5s infinite ease-in-out;
+}
+
+    .heart::before,
+    .heart::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #ff6699;
+        border-radius: 50%;
+        top: -10px;
+        left: 0;
+    }
+
+    .heart::after {
+        left: 10px;
+        top: 0;
+    }
+
+@keyframes float {
+    0% {
+        transform: translateY(100%) rotate(360deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-600px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+/* Адаптивность для телефонов */
+@media (max-width: 600px) {
+    body {
+        height: auto;
+        padding: 20px;
+    }
+
+    .greeting {
+        font-size: 2rem; /* Уменьшаем размер текста */
+    }
+
+    .message {
+        font-size: 1rem; /* Уменьшаем текст для удобства чтения */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Уменьшаем кнопку */
+        padding: 8px 16px;
+    }
+
+
+    .hearts {
+        height: 30vh; /* Уменьшаем высоту области сердечек */
+    }
+}
